@@ -13,6 +13,14 @@
   max-width: 300px;
 }
 
+#logoL {
+  display: block;
+  max-width: 10%;
+  height: auto;
+  margin-left: 33%;
+  margin-top: 10px;
+}
+
 /*
 .pesquisa {
   width: 50%;
@@ -71,17 +79,11 @@
     margin-right: 10px;
   }
 
-  #logo {
-    display: block;
-    max-width: 20%;
+
+  #logoL {
+    width: 10%;
+    height: auto;
+    margin: 0 auto;
 
   }
-}
-
-#logo {
-  display: inline;
-  max-width: 10%;
-  height: auto;
-  margin-left: 20px;
-  margin-top: 10px;
 }
