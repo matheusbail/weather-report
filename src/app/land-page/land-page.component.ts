@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './land-page.component.css'
 })
 export class LandPageComponent {
-  
+showCardInit=true;
+showLogo=true;
+showSearch=true;
+public search(){
+  this.showCardInit=false;
+  this.showLogo=false;
+  this.showSearch=false;
+}
 }
