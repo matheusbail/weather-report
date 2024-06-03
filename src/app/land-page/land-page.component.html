@@ -5,16 +5,14 @@
 @if(showSearch){
 <div class="pesquisa">
   <form role="search">
-    <input class="form-control me-2" type="text" placeholder="Pesquisar Localização.." [(ngModel)]="cityAddress"
+    <input focus class="form-control me-2" type="text" placeholder="Pesquisar Localização.." [(ngModel)]="cityAddress"
       name="address" required aria-label="Search">
-    <button class="btn btn-outline-success" type="button" value="hideComponent" id="hideAndShow"
-      (click)="search();onButtonClick()">Pesquisar</button>
+    <button class="btn btn-outline-dark" type="button" value="hideComponent" id="hideAndShow"
+      (click)="search();onButtonClick();">Pesquisar</button>
+
   </form>
 </div>
 }
-
-
-
 @if(showCardInit){
 <div class="card text-center" id="cardTemp">
   <div class="card-body">
@@ -22,6 +20,84 @@
     <a>XCidadeX</a>
     <i class="bi bi-sun" style="font-size: 6rem;color:#FF810C;"></i>
 
+  </div>
+</div>
+}
+
+@if(showToday){
+<!-- Card normal acima do container -->
+<div class="card invisible">
+  <div class="card-body">
+    <h5 class="card-title">bkp</h5>
+    <p class="card-text">bkp</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title  text-center">{{currentDay}}</h5>
+    <A>21º</A>
+    <p class="card-text"><i class="bi bi-sun-fill " style="font-size: 4rem;color:#FF810C;"></i></p>
+
+  </div>
+</div>
+}
+
+@if(showWeek){
+<div class="container-cards">
+  <!-- Card 1 -->
+  <div class="card border-info">
+    <div class="card-body">
+      <h5 class="card-title  text-center">Seg</h5>
+      <i class="bi bi-sun" style="font-size: 4rem;color:#FF810C;"></i>
+      <p>21º</p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card border-info">
+    <div class="card-body">
+      <h5 class="card-title text-center">Ter</h5>
+      <i class="bi bi-sun" style="font-size: 4rem;color:#FF810C;"></i>
+      <p>21º</p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card border-info">
+    <div class="card-body">
+      <h5 class="card-title  text-center">Qua</h5>
+      <i class="bi bi-sun" style="font-size: 4rem;color:#FF810C;"></i>
+      <p>21º</p>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card border-info">
+    <div class="card-body">
+      <h5 class="card-title  text-center">Qui</h5>
+      <i class="bi bi-sun" style="font-size: 4rem;color:#FF810C;"></i>
+      <p>21º</p>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card border-info">
+    <div class="card-body">
+      <h5 class="card-title  text-center">Sex</h5>
+      <i class="bi bi-sun" style="font-size: 4rem;color:#FF810C;"></i>
+      <p>21º</p>
+    </div>
+  </div>
+</div>
+}
+
+@if(showMap){
+<!-- Card maior ao lado do grupo de cards -->
+<div class="card card-maior border-info">
+  <div class="card-body">
+    <h5 class="card-title">Título do Card Maior</h5>
+    <p class="card-text">Texto do Card Maior.</p>
   </div>
 </div>
 }
