@@ -16,8 +16,8 @@ body {
   /* Tamanho lateral pequeno */
   height: 12rem;
   /* Longo verticalmente */
-
   margin-left: 1rem;
+  background-color: #02AE7A;
 }
 
 .invisible {
@@ -53,12 +53,82 @@ body {
   margin-bottom: 3rem;
   margin-top: 1rem;
   margin-left: 1rem;
-  border-radius: 1px;
+  border-radius: 10px;
   /* Bordas arredondadas */
-  border: 1px solid #ccc;
+  border: 4px solid #2EBFD2;
   /* Borda do container */
   padding: 1rem;
   /* Espaçamento interno do container */
-  background-color: white;
+  background-color: #02AE7A;
   /* Cor de fundo do container */
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    position: relative;
+    /* Adicionado para posicionar os elementos absolutamente */
+    min-height: 100vh;
+    /* Altura mínima para preencher a tela */
+    padding-bottom: 10rem;
+    /* Espaço no final do corpo para os cards */
+  }
+
+  /* Estilo para o card */
+  .card {
+    width: 14rem;
+    /* Tamanho lateral pequeno */
+    height: 12rem;
+    /* Longo verticalmente */
+    margin-left: 1rem;
+    background-color: #02AE7A;
+  }
+
+  .invisible {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* Estilo para o card maior */
+  .card-maior {
+    display: flex;
+    flex-direction: row-reverse;
+    float: right;
+    width: 20rem;
+    margin-right: 35px;
+    margin-left: 5px;
+    /* Tamanho lateral maior */
+    height: 35rem;
+    /* Longo verticalmente */
+    position: relative;
+    /* Posicionado absolutamente */
+    right: 0;
+    /* No canto inferior direito */
+    bottom: 0;
+    /* No canto inferior direito */
+    background-color: #02AE7A;
+  }
+
+  /* Estilo para o container do grupo de cards */
+  .container-cards {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 3rem;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    border: 3px solid #2EBFD2;
+    /* Borda do container */
+    padding: 10px;
+    /* Espaçamento interno do container */
+    background-color: #02AE7A;
+    /* Cor de fundo do container */
+  }
 }

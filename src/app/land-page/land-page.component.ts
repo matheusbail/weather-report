@@ -1,6 +1,7 @@
+import { WeatherPageComponent } from './../weather-page/weather-page.component';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { WeatherPageComponent } from '../weather-page/weather-page.component';
+
 
 @Component({
   selector: 'app-land-page',
@@ -15,9 +16,23 @@ cityAddress="";
 showCardInit=true;
 showLogo=true;
 showSearch=true;
+showWeek=false;
+showMap=false;
+showToday=false;
+
+
 public search(){
   this.showCardInit=false;
   this.showLogo=false;
   this.showSearch=false;
 }
+
+
+onButtonClick(){
+  this.showWeek=true;
+  this.showMap=true;
+  this.showToday=true;
+
+}
+
 }

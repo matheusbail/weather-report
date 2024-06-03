@@ -8,15 +8,18 @@
     <input class="form-control me-2" type="text" placeholder="Pesquisar Localização.." [(ngModel)]="cityAddress"
       name="address" required aria-label="Search">
     <button class="btn btn-outline-success" type="button" value="hideComponent" id="hideAndShow"
-      (click)="search()">Pesquisar</button>
+      (click)="search();onButtonClick()">Pesquisar</button>
   </form>
 </div>
 }
+
+
 
 @if(showCardInit){
 <div class="card text-center" id="cardTemp">
   <div class="card-body">
     <h5 class="card-title">Ultima Pesquisa</h5>
+    <a>XCidadeX</a>
     <i class="bi bi-sun" style="font-size: 6rem;color:#FF810C;"></i>
 
   </div>
