@@ -1,4 +1,4 @@
-import { Component, input} from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 
 @Component({
@@ -10,5 +10,8 @@ import { Component, input} from '@angular/core';
 })
 export class NavComponent{
  
-  hideSearch = true;
+  @Input()
+  hide!: boolean;
+  //hideSearch = true;
+
 }
