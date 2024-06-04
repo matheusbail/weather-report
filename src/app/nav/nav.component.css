@@ -20,3 +20,15 @@ nav {
   color: white;
 
 }
+
+#hiddenSearch {
+  font-size: medium;
+
+  margin-left: 20%;
+}
+
+#typeSearch {
+  font-size: medium;
+  float: left;
+  position: absolute;
+}
