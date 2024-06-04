@@ -14,5 +14,4 @@ export class NavComponent{
   hide!: boolean;
   //hideSearch = true;
   
-
 }
