@@ -13,5 +13,6 @@ export class NavComponent{
   @Input()
   hide!: boolean;
   //hideSearch = true;
+  
 
 }
