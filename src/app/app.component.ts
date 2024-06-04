@@ -13,4 +13,11 @@ import{LandPageComponent} from './land-page/land-page.component'
 })
 export class AppComponent {
   title = 'weather-report';
+  hidden = true
+
+receiveClick($event){
+  this.receiveClick = $event
+  this.hidden = false;
+}
+
 }
