@@ -30,5 +30,7 @@ nav {
 #typeSearch {
   font-size: medium;
   float: left;
-  position: absolute;
+  position: relative;
+  border-color: #02AE7A;
+  border-radius: 10px;
 }
