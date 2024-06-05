@@ -1,13 +1,28 @@
-/*.card {
-  width: 250px;
-  height: 250px;
-  padding-bottom: 10%;
-  margin-left: 5%;
+#frase {
+  text-align: center;
+}
 
-}*/
+.item {
+  text-align: center;
+  margin: 10px;
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  font-weight: bold;
+}
+
+.detalhe {
+  color: #666;
+  font-size: 14px;
+}
+
 
 #cardTemp {
-  position: fixed;
   bottom: 20px;
   left: 20px;
   max-width: 300px;
@@ -21,16 +36,6 @@
   margin-left: 33%;
   margin-top: 10px;
 }
-
-/*
-.pesquisa {
-  width: 50%;
-  height: 20%;
-  margin-left: 25%;
-  padding-bottom: 2%;
-  padding-top: 5%;
-
-}*/
 
 .pesquisa {
   margin: 20px auto;
@@ -57,20 +62,6 @@
 
 @media screen and (max-width: 600px) {
 
-  /*.card {
-    width: 150px;
-    height: 150px;
-    margin-top: 30%;
-  }
-*/
-  /*
-  .pesquisa {
-    width: 70%;
-    height: 50%;
-    margin-left: 15%;
-
-  }
-*/
   .pesquisa form {
     flex-wrap: nowrap;
   }
@@ -116,45 +107,6 @@ body {
   visibility: hidden;
 }
 
-/* Estilo para o card maior */
-.card-maior {
-  display: flex;
-  flex-direction: row-reverse;
-  float: right;
-  width: 30rem;
-  margin-right: 1rem;
-  /* Tamanho lateral maior */
-  height: 35rem;
-  /* Longo verticalmente */
-  position: absolute;
-  /* Posicionado absolutamente */
-  right: 0;
-  /* No canto inferior direito */
-  bottom: 0;
-  /* No canto inferior direito */
-}
-
-/* Estilo para o container do grupo de cards */
-.container-cards {
-  width: 40%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  border-radius: 10px;
-  /* Bordas arredondadas */
-  border: 4px solid #2EBFD2;
-  /* Borda do container */
-  padding: 1rem;
-  /* Espaçamento interno do container */
-  background-color: #02AE7A;
-  /* Cor de fundo do container */
-}
-
-
 @media screen and (max-width: 600px) {
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -180,46 +132,5 @@ body {
   .invisible {
     display: none;
     visibility: hidden;
-  }
-
-  /* Estilo para o card maior */
-  .card-maior {
-    display: flex;
-    flex-direction: row-reverse;
-    float: right;
-    width: 20rem;
-    margin-right: 35px;
-    margin-left: 5px;
-    /* Tamanho lateral maior */
-    height: 35rem;
-    /* Longo verticalmente */
-    position: relative;
-    /* Posicionado absolutamente */
-    right: 0;
-    /* No canto inferior direito */
-    bottom: 0;
-    /* No canto inferior direito */
-    background-color: #02AE7A;
-  }
-
-  /* Estilo para o container do grupo de cards */
-  .container-cards {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    position: relative;
-    margin-bottom: 3rem;
-
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    border: 3px solid #2EBFD2;
-    /* Borda do container */
-    padding: 10px;
-    /* Espaçamento interno do container */
-    background-color: #02AE7A;
-    /* Cor de fundo do container */
   }
 }

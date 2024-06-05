@@ -1,0 +1,67 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  position: relative;
+  /* Adicionado para posicionar os elementos absolutamente */
+  min-height: 100vh;
+  /* Altura mínima para preencher a tela */
+  padding-bottom: 10rem;
+  /* Espaço no final do corpo para os cards */
+}
+
+/* Estilo para o card maior */
+.card-maior {
+  display: inline-block;
+  flex-direction: row-reverse;
+  position: absolute;
+  width: 35rem;
+  margin-left: 200px;
+
+  /* Tamanho lateral maior */
+  height: 35rem;
+  /* Longo verticalmente */
+  position: relative;
+  /* Posicionado absolutamente */
+
+  /* No canto inferior direito */
+
+  /* No canto inferior direito */
+  background-color: #02AE7A;
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    position: relative;
+    /* Adicionado para posicionar os elementos absolutamente */
+    min-height: 100vh;
+    /* Altura mínima para preencher a tela */
+    padding-bottom: 10rem;
+    /* Espaço no final do corpo para os cards */
+  }
+
+  .card-maior {
+    display: inline-flex;
+    flex-direction: row-reverse !important;
+    float: right;
+    width: 20rem;
+    margin-right: 35px;
+    margin-left: 5px;
+    /* Tamanho lateral maior */
+    height: 35rem;
+    /* Longo verticalmente */
+    position: relative;
+    /* Posicionado absolutamente */
+    left: 0;
+    /* No canto inferior direito */
+    bottom: 0;
+    /* No canto inferior direito */
+    background-color: #02AE7A;
+  }
+}

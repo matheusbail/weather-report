@@ -8,7 +8,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
+    "noImplicitAny": false, // adicionado para rodar o evento 
     "skipLibCheck": true,
     "esModuleInterop": true,
     "sourceMap": true,
