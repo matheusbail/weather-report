@@ -19,7 +19,16 @@ getCity(){
   console.log(this.cityAddress);
 }*/
 
-constructor(private weatherService: WeatherService){}
+
+constructor(private weatherService: WeatherService){
+  this.weatherService.getTemp().subscribe({
+    next:(data)=>{
+      console.log(data)
+    },
+    error:(error) =>console.log(error.message),
+    complete: ()=>console.info('API Call OK')
+  })
+}
 cityAddress ="";
  function(){
   localStorage.setItem("Cidade",this.cityAddress);
@@ -28,10 +37,25 @@ cityAddress ="";
       console.log(data)
     },
     error:(error) =>console.log(error.message),
-
     complete: ()=>console.info('API Call OK')
   })
 }
+
+
+/*
+ public Cidades : any ;
+  constructor(private weatherService: WeatherService){
+    
+    this.weatherService.getCityData().subscribe((data)=>{
+      this.Cidades = data;
+    });
+  }
+
+*/
+ 
+    
+
+
 
 showCardInit=true;
 showLogo=true;

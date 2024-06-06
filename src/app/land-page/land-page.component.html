@@ -5,11 +5,11 @@
 @if(showSearch){
 <div class="pesquisa">
   <form role="search">
-    <input focus class="form-control me-2" type="text" placeholder="Pesquisar Localização.." [(ngModel)]="cityAddress"
-      name="address" required aria-label="Search">
+    <input focus class="form-control me-2" type="text" placeholder="Pesquisar Localização.." name="address" required
+      [(ngModel)]="cityAddress" aria-label="Search">
     <button class="btn btn-outline-dark" type="button" value="hideComponent" id="hideAndShow"
-      (click)="search(); onButtonClick(); clicker();function()">Pesquisar</button>
-
+      (click)="search(); onButtonClick(); clicker();function() ">Pesquisar</button>
+    <!--    AAAAAAAA {{Cidades}}-->
   </form>
 </div>
 }
