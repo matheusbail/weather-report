@@ -17,11 +17,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <input type="text" id="typeSearch">
+        <form>
+          <input type="text" id="typeSearch" name="address" [(ngModel)]="cityAddress">
+        </form>
       </div>
       <div class="modal-footer">
         <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>-->
-        <button type="submit" class="btn btn-primary">Pesquisar</button>
+        <button type="button" class="btn btn-primary" (click)="function();" data-bs-dismiss="modal">Pesquisar</button>
       </div>
     </div>
   </div>

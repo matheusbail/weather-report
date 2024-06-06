@@ -12,12 +12,18 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './land-page.component.css'
 })
 export class LandPageComponent {
-cityAddress="";
+/*cityAddress="";
+getCity(){
+  this.cityAddress;
+  localStorage.setItem("Cidade",this.cityAddress);
+  console.log(this.cityAddress);
+}*/
 
-
-constructor(private weatherService: WeatherService){
- 
-  this.weatherService.getTemp().subscribe({
+constructor(private weatherService: WeatherService){}
+cityAddress ="";
+ function(){
+  localStorage.setItem("Cidade",this.cityAddress);
+  this.weatherService.getCityData().subscribe({
     next:(data)=>{
       console.log(data)
     },
@@ -25,9 +31,8 @@ constructor(private weatherService: WeatherService){
 
     complete: ()=>console.info('API Call OK')
   })
-
-
 }
+
 showCardInit=true;
 showLogo=true;
 showSearch=true;
