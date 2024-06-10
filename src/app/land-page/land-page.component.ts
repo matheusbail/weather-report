@@ -62,8 +62,6 @@ cityAddress ="";
      let dataString = JSON.stringify(data); 
      localStorage.setItem('obj',dataString)
      this.Display(data)
-     
-     
     },
     error:(error) =>console.log(error.message),
     complete: ()=>console.info('API Retornou Dados Da Cidade')
