@@ -15,7 +15,7 @@ export class NavComponent{
   city ="";
   temp ="";
   environment="";
-  
+
   constructor(private weatherService: WeatherService){}
   cityAddress ="";
   function(){
@@ -24,6 +24,7 @@ export class NavComponent{
      next:(data)=>{
        console.log(data)
        this.Display(data)
+       
      },
      error:(error) =>console.log(error.message),
  
@@ -35,9 +36,7 @@ export class NavComponent{
   hide!: boolean;
   //hideSearch = true;
 
-
   Display(weather){
-    //let cidade = weather.main.temp;
     let temperature = weather.main.temp;
     let cidade = weather.name;
     let environmentStatus = weather.main.temp_max  

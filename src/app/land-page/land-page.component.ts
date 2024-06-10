@@ -29,6 +29,7 @@ public search(){
   city ="";
   temp ="";
   environment="";
+  last="";
   onButtonClick(){
   this.showWeek=true;
   this.showMap=true;
@@ -46,7 +47,10 @@ public search(){
 
 constructor(private weatherService: WeatherService)
 {
-
+  let search = localStorage.getItem('Cidade');
+  console.log(search)
+  let xd = search!.toString()
+  this.last = xd;
 }
 cityAddress ="";
  function(){
@@ -54,9 +58,12 @@ cityAddress ="";
   this.weatherService.getCityData().subscribe({
     next:(data)=>{
     console.log(data)
-    this.Display(data)
+   
      let dataString = JSON.stringify(data); 
      localStorage.setItem('obj',dataString)
+     this.Display(data)
+     
+     
     },
     error:(error) =>console.log(error.message),
     complete: ()=>console.info('API Retornou Dados Da Cidade')
@@ -76,9 +83,6 @@ cityAddress ="";
   console.log(temperature)
   console.log(environmentStatus);
 
-localStorage.setItem('last',weather);
-console.log(weather);
-(document.getElementById('lastSearch') as HTMLTextAreaElement).innerHTML! = weather.name;
 } 
 
 }
