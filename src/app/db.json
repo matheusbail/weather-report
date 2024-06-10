@@ -1,9 +1,42 @@
 {
-  "Cidades": [{
-    "id": 1,
-    "Nome": "Guarapuava",
-    "lat": -25.3950986,
-    "lon": -51.4622016
+  "Dias": [{
+      "id": 1,
+      "nome": "Segunda",
+      "abreviado": "Seg",
+      "Temp": "21º"
+    },
+    {
+      "id": 2,
+      "nome": "Terça",
+      "abreviado": "Ter",
+      "Temp": "22º"
+    }, {
+      "id": 3,
+      "nome": "Quarta",
+      "abreviado": "Qua",
+      "Temp": "17º"
+    },
+    {
+      "id": 4,
+      "nome": "Quinta",
+      "abreviado": "Qui",
+      "Temp": "14º"
+    }, {
+      "id": 5,
+      "nome": "Sexta",
+      "abreviado": "Sex",
+      "Temp": "19º"
+    }, {
+      "id": 6,
+      "nome": "Sábado",
+      "abreviado": "Sáb",
+      "Temp": "20º"
+    }, {
+      "id": 7,
+      "nome": "Domingo",
+      "abreviado": "Dom",
+      "Temp": "23º"
+    }
 
-  }]
+  ]
 }

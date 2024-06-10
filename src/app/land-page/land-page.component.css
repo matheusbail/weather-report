@@ -27,6 +27,8 @@
   left: 20px;
   max-width: 300px;
   background-color: #02AE7A;
+  border: 3px solid #2EBFD2;
+
 }
 
 #logoL {
@@ -100,6 +102,8 @@ body {
   /* Longo verticalmente */
   margin-left: 1rem;
   background-color: #02AE7A;
+  border: 3px solid #2EBFD2;
+
 }
 
 .invisible {

@@ -12,9 +12,9 @@ import { WeatherService } from '../weather.service';
 })
 export class NavComponent{
 
-  city ="";
+ /* city ="";
   temp ="";
-  environment="";
+  environment="";*/
 
   constructor(private weatherService: WeatherService){}
   cityAddress ="";
@@ -23,7 +23,7 @@ export class NavComponent{
    this.weatherService.getCityData().subscribe({
      next:(data)=>{
        console.log(data)
-       this.Display(data)
+   //    this.Display(data)
        
      },
      error:(error) =>console.log(error.message),
@@ -35,7 +35,7 @@ export class NavComponent{
   @Input()
   hide!: boolean;
   //hideSearch = true;
-
+/*
   Display(weather){
     let temperature = weather.main.temp;
     let cidade = weather.name;
@@ -46,15 +46,15 @@ export class NavComponent{
     console.log(cidade)
     console.log(temperature)
     console.log(environmentStatus);
-
-
+}
+*/
 
 
 
 
 
   
-}
+
 }
 
 
