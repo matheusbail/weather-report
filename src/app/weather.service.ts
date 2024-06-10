@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NavComponent } from './nav/nav.component';
+import { IDado } from './IDados';
 
 @Injectable({
   providedIn: 'root'
@@ -8,19 +8,11 @@ import { NavComponent } from './nav/nav.component';
 export class WeatherService {
 
   constructor(private http: HttpClient) { }
-    
-    cityInput = localStorage.getItem('Cidade');
-    estateInput = "PR";
-    countryInput = "BR";
-    latInput=-25.3950986;
-    lonInput=-51.4622016;  
- 
     getCityData(){
-     return this.http.get(`https://api.openweathermap.org/geo/1.0/direct?q=${this.cityInput},${this.estateInput},${this.countryInput}&limit=1&appid=1aec92b9eb5e7c3b0c5c89d5141406a2`)
+     let cityInput = localStorage.getItem('Cidade');
 
-    } 
-    getTemp(){
-      return this.http.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.latInput}&lon=${this.lonInput}&appid=1aec92b9eb5e7c3b0c5c89d5141406a2`)
+     return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=1aec92b9eb5e7c3b0c5c89d5141406a2&units=metric`)
+    
+    }
     }
     
-}

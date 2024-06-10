@@ -17,10 +17,10 @@
 <div class="card text-center position-absolute  absolute-bottom" id="cardTemp">
   <div class="card-body">
     <h5 class="card-title">Ultima Pesquisa</h5>
-    <a>XCidadeX</a>
+    <span id="lastSearch">A</span>
     <div class="item">
       <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-      <div class="descricao">Item 1</div>
+      <div class="descricao">{{temp}}</div>
     </div>
   </div>
 </div>
@@ -37,12 +37,12 @@
 
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title  text-center">{{currentDay}}</h5>
+    <h5 id="city" class="card-title  text-center">{{city}}</h5>
     <div class="item">
       <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-      <div class="descricao">Item 1</div>
+      <div class="descricao">{{temp}}</div>
     </div>
   </div>
 </div>
-<h5 id="frase">O Clima na sua cidade, {{currentDay}} e sempre!</h5>
+<h5 id="day">A Máxima na sua cidade hoje é de, {{environment}}º!</h5>
 }
