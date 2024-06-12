@@ -5,13 +5,15 @@ import { NavComponent } from '../nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @Component({
   selector: 'app-land-page',
   standalone: true,
-  imports: [FormsModule,NavComponent,HttpClientModule],
+  imports: [FormsModule,NavComponent,HttpClientModule,],
   templateUrl: './land-page.component.html',
   styleUrl: './land-page.component.css'
 })
+
 export class LandPageComponent {
   showCardInit=true;
   showLogo=true;
@@ -19,6 +21,7 @@ export class LandPageComponent {
   showWeek=false;
   showMap=false;
   showToday=false;
+  submit: any;
  
 public search(){
   this.showCardInit=false;
@@ -29,6 +32,7 @@ public search(){
   city ="";
   temp ="";
   environment="";
+  last="";
   onButtonClick(){
   this.showWeek=true;
   this.showMap=true;
@@ -46,7 +50,11 @@ public search(){
 
 constructor(private weatherService: WeatherService)
 {
-
+  let search = localStorage.getItem('Cidade');
+  console.log(search)
+  let xd = search!.toString()
+  this.last = xd;
+  
 }
 cityAddress ="";
  function(){
@@ -54,18 +62,23 @@ cityAddress ="";
   this.weatherService.getCityData().subscribe({
     next:(data)=>{
     console.log(data)
-    this.Display(data)
      let dataString = JSON.stringify(data); 
      localStorage.setItem('obj',dataString)
+     this.Display(data)
+   
+
+    // this.validate();
+     
     },
-    error:(error) =>console.log(error.message),
+    error:(error) =>{window.location.reload();
+      alert("Por Favor, cheque se o nome da cidade foi digitado corretamente")
+    },
     complete: ()=>console.info('API Retornou Dados Da Cidade')
   })
  
 }
 
  Display(weather){
-  //let cidade = weather.main.temp;
   let temperature = weather.main.temp;
   let cidade = weather.name;
   let environmentStatus = weather.main.temp_max  
@@ -76,10 +89,17 @@ cityAddress ="";
   console.log(temperature)
   console.log(environmentStatus);
 
-localStorage.setItem('last',weather);
-console.log(weather);
-(document.getElementById('lastSearch') as HTMLTextAreaElement).innerHTML! = weather.name;
 } 
+/*
+
+validate(){
+  let input = document.getElementById('XDXD');
+ if(input = null)
+ console.log(input)
+  alert("Errado")
+}
+  */
+
 
 }
 
