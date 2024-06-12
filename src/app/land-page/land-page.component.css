@@ -57,6 +57,16 @@
   margin-bottom: 10px;
 }
 
+input:required:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+
+
 .pesquisa button {
   flex: 0 1 auto;
   min-width: 150px;
@@ -137,4 +147,26 @@ body {
     display: none;
     visibility: hidden;
   }
+}
+
+
+.cardEXE {
+  width: 20rem;
+  height: 20rem;
+  margin-left: 1rem;
+  background-color: #728f86;
+  border: 3px solid #0000;
+  float: right;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  position: absolute;
+}
+
+
+#forecast {
+  width: 19rem;
+  margin-left: 5px;
+  /* Tamanho lateral pequeno */
+  height: 10rem;
 }

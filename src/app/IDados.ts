@@ -1,10 +1,9 @@
 export interface IDado{
     
-    id: number,
-    country: string,
-    lat: number,
-    lon: number,
-    name: string,
-    state: string
+        c: number,
+        nome: string,
+        abreviado: string,
+        Temp: number
+      
 
 }

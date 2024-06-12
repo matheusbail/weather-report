@@ -4,12 +4,12 @@
 }
 @if(showSearch){
 <div class="pesquisa">
-  <form role="search">
-    <input focus class="form-control me-2" type="text" placeholder="Pesquisar Localização.." name="address" required
-      [(ngModel)]="cityAddress" aria-label="Search">
-    <button class="btn btn-outline-dark" type="button" value="hideComponent" id="hideAndShow"
-      (click)="search(); onButtonClick(); clicker();function() ">Pesquisar</button>
-    <!--    AAAAAAAA {{Cidades}}-->
+  <form role="search" #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
+    <input focus class="form-control me-2" type="text" placeholder="Pesquisar Localização.." name="cityAddress" ngModel
+      required [(ngModel)]="cityAddress" aria-label="Search" pattern="^[A-Za-z]*.[A-Za-z]*.[A-Za-z]*$" minlength=4
+      id="validate">
+    <button class="btn btn-outline-dark" type="submit" value="hideComponent" id="hideAndShow"
+      [disabled]="loginForm.invalid" (click)="search(); onButtonClick(); clicker();function() ">Pesquisar</button>
   </form>
 </div>
 }
@@ -25,8 +25,8 @@
   </div>
 </div>
 }
-
 @if(showToday){
+
 <!-- Card normal acima do container -->
 <div class="card invisible">
   <div class="card-body">
@@ -45,4 +45,16 @@
   </div>
 </div>
 <h5 id="day">A Máxima na sua cidade hoje é de, {{environment}}º!</h5>
+
+<div class="cardEXE">
+  <div class="card-body">
+    <h5 id="city" class="card-title  text-center">CLIQUE!</h5>
+    <img id="forecast"
+      src="https://res.cloudinary.com/dkrl41s4z/image/upload/v1718219522/frameworkdev/p4forecast_cw5ecg.jpg" alt="temp">
+    <div class="item">
+      <button class="btn btn-outline-dark">X</button>
+      <div class="descricao">AQUI</div>
+    </div>
+  </div>
+</div>
 }

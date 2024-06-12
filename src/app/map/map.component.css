@@ -13,6 +13,16 @@ body {
   /* Espaço no final do corpo para os cards */
 }
 
+
+
+
+
+
+#imgMap {
+  width: 33rem;
+  height: 33rem;
+}
+
 /* Estilo para o card maior */
 .card-maior {
   display: inline-block;

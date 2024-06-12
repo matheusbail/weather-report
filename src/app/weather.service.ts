@@ -14,5 +14,12 @@ export class WeatherService {
      return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=1aec92b9eb5e7c3b0c5c89d5141406a2&units=metric`)
     
     }
-    }
+
+   weekData(){
+      const url = "http://localhost:3000/"
+      console.log(url);
+      return this.http.get(`${url}Dias`);
+      }
+    
+}
     
