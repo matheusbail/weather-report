@@ -21,7 +21,6 @@ export class WeatherService {
       console.log(url);
       return this.http.get(`${url}Dias`);
       }
-
       private pesquisar = new Subject<any>(); //need to create a subject
     
         sendUpdate(city: string) { //the component that wants to update something, calls this fn

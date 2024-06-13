@@ -2,6 +2,7 @@
 <img class="logo" id="logoL"
   src="https://res.cloudinary.com/dkrl41s4z/image/upload/v1716911500/frameworkdev/LOGOAIWR_frg1rx.png" alt="logo">
 }
+
 @if(showSearch){
 <div class="pesquisa">
   <form role="search" #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
@@ -12,16 +13,15 @@
       [disabled]="loginForm.invalid" (click)="search(); onButtonClick(); clicker();function() ">Pesquisar</button>
   </form>
 </div>
-
 }
 @if(showCardInit){
-
 <div class="card text-center" id="cardTemp">
   <div class="card-body">
     <h5 class="card-title">Ultima Pesquisa</h5>
     <span id="lastSearch">{{last}}</span>
     <div class="item">
-      <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
+      <h5 class="card-title">Pesquisando Agora...</h5>
+      <span id="lastSearch">{{cityAddress}}</span>
       <div class="descricao">{{temp}}</div>
     </div>
   </div>
@@ -43,11 +43,11 @@
     <h5 id="city" class="card-title  text-center">{{city}}</h5>
     <div class="item">
       <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-      <div class="descricao">{{temp}}</div>
+      <div class="descricao">{{temp}}º</div>
     </div>
   </div>
 </div>
-<h5 id="day">A Máxima na sua cidade hoje é de,{{environment}}º!</h5>}
+<h5 id="day">A Sensação Máxima hoje, {{today | date:"fullDate"}} é de {{environment  | number : '1.0-0'}}º!</h5>}
 
 <!--
 <div class="cardEXE">
