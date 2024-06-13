@@ -4,19 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { NavComponent } from '../nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Subscription } from 'rxjs';
-import { DeferBlockDepsEmitMode } from '@angular/compiler';
+import { DatePipe, DecimalPipe } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-land-page',
   standalone: true,
-  imports: [FormsModule,NavComponent,HttpClientModule,],
+  imports: [FormsModule,NavComponent,HttpClientModule,DatePipe,DecimalPipe],
   templateUrl: './land-page.component.html',
   styleUrl: './land-page.component.css'
+  
 })
 
 export class LandPageComponent {
+  today: number = Date.now();
   showCardInit=true;
   showLogo=true;
   showSearch=true;
@@ -59,7 +61,7 @@ constructor(private weatherService: WeatherService)
   this.last = xd;
 
         this.subscriptionName= weatherService.getUpdate().subscribe
-             (emitt => { //message contains the data sent from service
+             (emitt => {
              this.receivedValue = emitt;
              console.log(emitt.string)
              let temp = emitt.string;
@@ -91,20 +93,16 @@ cityAddress ="";
   let temperature = weather.main.temp;
   let cidade = weather.name;
   let environmentStatus = weather.main.temp_max  
-  let icon = weather.weather[0].icon;
   this.environment = environmentStatus;
   this.temp = temperature
   this.city = cidade
-  this.ic = icon;
   console.log(cidade)
   console.log(temperature)
   console.log(environmentStatus);
-  console.log(icon);
 
 } 
-
          receivedValue: any;
-         private subscriptionName: Subscription; //important to create a subscription
+         private subscriptionName: Subscription;
 
      
    
