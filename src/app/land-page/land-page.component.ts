@@ -1,8 +1,10 @@
 import { WeatherService } from './../weather.service';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from '../nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Subscription } from 'rxjs';
+import { DeferBlockDepsEmitMode } from '@angular/compiler';
 
 
 
@@ -28,11 +30,12 @@ public search(){
   this.showLogo=false;
   this.showSearch=false;
 }
-  currentDay ="";
+ currentDay ="";
   city ="";
   temp ="";
   environment="";
   last="";
+
   onButtonClick(){
   this.showWeek=true;
   this.showMap=true;
@@ -40,7 +43,6 @@ public search(){
 
 }
 @Output() buttonClick = new EventEmitter<boolean>();
-  
   buttonClicked: boolean = true;
 
   clicker(){
@@ -54,6 +56,18 @@ constructor(private weatherService: WeatherService)
   console.log(search)
   let xd = search!.toString()
   this.last = xd;
+
+
+
+        this.subscriptionName= weatherService.getUpdate().subscribe
+             (emitt => { //message contains the data sent from service
+             this.receivedValue = emitt;
+             console.log(emitt.string)
+             let temp = emitt.string;
+                localStorage.setItem('Cidade',this.cityAddress = temp);
+                this.function();
+             });
+
   
 }
 cityAddress ="";
@@ -64,11 +78,8 @@ cityAddress ="";
     console.log(data)
      let dataString = JSON.stringify(data); 
      localStorage.setItem('obj',dataString)
-     this.Display(data)
+      this.Display(data);
    
-
-    // this.validate();
-     
     },
     error:(error) =>{window.location.reload();
       alert("Por Favor, cheque se o nome da cidade foi digitado corretamente")
@@ -77,7 +88,6 @@ cityAddress ="";
   })
  
 }
-
  Display(weather){
   let temperature = weather.main.temp;
   let cidade = weather.name;
@@ -90,16 +100,15 @@ cityAddress ="";
   console.log(environmentStatus);
 
 } 
-/*
 
-validate(){
-  let input = document.getElementById('XDXD');
- if(input = null)
- console.log(input)
-  alert("Errado")
+         receivedValue: any;
+         private subscriptionName: Subscription; //important to create a subscription
+
+     
+   
+
+ 
+
+
+
 }
-  */
-
-
-}
-

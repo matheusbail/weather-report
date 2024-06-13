@@ -5,13 +5,14 @@ import{LandPageComponent} from './land-page/land-page.component'
 import { MapComponent } from './map/map.component';
 import { WeekComponent } from './week/week.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ForecastComponent } from './forecast/forecast.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent,LandPageComponent,MapComponent,WeekComponent,HttpClientModule], 
+  imports: [RouterOutlet, NavComponent,LandPageComponent,MapComponent,WeekComponent,HttpClientModule,ForecastComponent], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -20,9 +21,11 @@ export class AppComponent {
   hidden = true;  
   hideWeek = true;
 
+ 
   receiveClick($event){
   this.receiveClick = $event
   this.hidden = false;
 }
 
 }
+
