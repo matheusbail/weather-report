@@ -12,6 +12,7 @@ import { WeatherService } from '../weather.service';
 })
 export class NavComponent{
 
+  submit: any;
 
   constructor(private weatherService: WeatherService){
     
@@ -24,7 +25,9 @@ export class NavComponent{
        console.log(data)
        this.sendClick();
      },
-     error:(error) =>console.log(error.message),
+     error:(error) =>{window.location.reload();
+      alert("Por Favor, cheque se o nome da cidade foi digitado corretamente")
+    },
  
      complete: ()=>console.info('API Retornou Lat e Lon')
    })
