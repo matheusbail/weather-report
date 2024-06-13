@@ -1,3 +1,14 @@
 .copyright {
   text-align: center;
+  position: flex;
+  left: 33rem;
+}
+
+@media screen and (max-width: 600px) {
+  .copyright {
+    text-align: center;
+    position: flex;
+    bottom: 1rem;
+    left: 1rem;
+  }
 }

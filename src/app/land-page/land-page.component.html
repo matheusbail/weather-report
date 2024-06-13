@@ -15,7 +15,8 @@
 
 }
 @if(showCardInit){
-<div class="card text-center position-absolute  absolute-bottom" id="cardTemp">
+
+<div class="card text-center" id="cardTemp">
   <div class="card-body">
     <h5 class="card-title">Ultima Pesquisa</h5>
     <span id="lastSearch">{{last}}</span>
@@ -27,19 +28,26 @@
 </div>
 }
 @if(showToday){
-<div class="d-row-flex">
-  <!-- Card normal acima do container -->
-  <div class="card">
-    <div class="card-body">
-      <h5 id="city" class="card-title  text-center">{{city}}</h5>
-      <div class="item">
-        <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-        <div class="descricao">{{temp}}</div>
-      </div>
+<!-- Card normal acima do container -->
+<div class="card invisible">
+  <div class="card-body">
+    <h5 id="city" class="card-title  text-center">{{city}}</h5>
+    <div class="item">
+      <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
+      <div class="descricao">{{temp}}</div>
     </div>
   </div>
 </div>
-<h5 id="day">A Máxima na sua cidade hoje é de, {{environment}}º!</h5>}
+<div class="card">
+  <div class="card-body">
+    <h5 id="city" class="card-title  text-center">{{city}}</h5>
+    <div class="item">
+      <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
+      <div class="descricao">{{temp}}</div>
+    </div>
+  </div>
+</div>
+<h5 id="day">A Máxima na sua cidade hoje é de,{{environment}}º!</h5>}
 
 <!--
 <div class="cardEXE">

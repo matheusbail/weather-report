@@ -35,6 +35,7 @@ public search(){
   temp ="";
   environment="";
   last="";
+  ic="";
 
   onButtonClick(){
   this.showWeek=true;
@@ -56,8 +57,6 @@ constructor(private weatherService: WeatherService)
   console.log(search)
   let xd = search!.toString()
   this.last = xd;
-
-
 
         this.subscriptionName= weatherService.getUpdate().subscribe
              (emitt => { //message contains the data sent from service
@@ -92,12 +91,15 @@ cityAddress ="";
   let temperature = weather.main.temp;
   let cidade = weather.name;
   let environmentStatus = weather.main.temp_max  
+  let icon = weather.weather[0].icon;
   this.environment = environmentStatus;
   this.temp = temperature
   this.city = cidade
+  this.ic = icon;
   console.log(cidade)
   console.log(temperature)
   console.log(environmentStatus);
+  console.log(icon);
 
 } 
 

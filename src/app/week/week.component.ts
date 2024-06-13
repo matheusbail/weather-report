@@ -49,16 +49,6 @@ export class WeekComponent {
       }
     })
   }
-  
-  weekDisplay(){
-  
-  }
-
-
-
-
-
-
 
   
 }
