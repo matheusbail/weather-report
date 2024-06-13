@@ -126,11 +126,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
     position: relative;
-    /* Adicionado para posicionar os elementos absolutamente */
     min-height: 100vh;
-    /* Altura mínima para preencher a tela */
     padding-bottom: 10rem;
-    /* Espaço no final do corpo para os cards */
   }
 
   /* Estilo para o card */
@@ -140,6 +137,7 @@ body {
     height: 12rem;
     /* Longo verticalmente */
     margin-left: 1rem;
+
     background-color: #02AE7A;
   }
 

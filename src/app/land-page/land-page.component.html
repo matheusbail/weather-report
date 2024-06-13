@@ -12,6 +12,7 @@
       [disabled]="loginForm.invalid" (click)="search(); onButtonClick(); clicker();function() ">Pesquisar</button>
   </form>
 </div>
+
 }
 @if(showCardInit){
 <div class="card text-center position-absolute  absolute-bottom" id="cardTemp">
@@ -26,26 +27,21 @@
 </div>
 }
 @if(showToday){
-
-<!-- Card normal acima do container -->
-<div class="card invisible">
-  <div class="card-body">
-    <h5 class="card-title">bkp</h5>
-    <p class="card-text">bkp</p>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-body">
-    <h5 id="city" class="card-title  text-center">{{city}}</h5>
-    <div class="item">
-      <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-      <div class="descricao">{{temp}}</div>
+<div class="d-row-flex">
+  <!-- Card normal acima do container -->
+  <div class="card">
+    <div class="card-body">
+      <h5 id="city" class="card-title  text-center">{{city}}</h5>
+      <div class="item">
+        <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
+        <div class="descricao">{{temp}}</div>
+      </div>
     </div>
   </div>
 </div>
-<h5 id="day">A Máxima na sua cidade hoje é de, {{environment}}º!</h5>
+<h5 id="day">A Máxima na sua cidade hoje é de, {{environment}}º!</h5>}
 
+<!--
 <div class="cardEXE">
   <div class="card-body">
     <h5 id="city" class="card-title  text-center">CLIQUE!</h5>
@@ -58,3 +54,4 @@
   </div>
 </div>
 }
+-->

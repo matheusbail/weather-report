@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LandPageComponent } from '../land-page/land-page.component';
 
 @Component({
   selector: 'app-forecast',
@@ -9,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class ForecastComponent {
 
+
+clickto(){
+}
 }
