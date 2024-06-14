@@ -10,6 +10,5 @@ import { Component,Input } from '@angular/core';
 export class MapComponent {
   @Input()
   hideMap!: boolean;
-  //hideSearch = true;
   
 }

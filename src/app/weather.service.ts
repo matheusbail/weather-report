@@ -21,14 +21,14 @@ export class WeatherService {
       console.log(url);
       return this.http.get(`${url}Dias`);
       }
-      private pesquisar = new Subject<any>(); //need to create a subject
+      private pesquisar = new Subject<any>(); //Cria um Subject
     
-        sendUpdate(city: string) { //the component that wants to update something, calls this fn
-            this.pesquisar.next({ string: city }); //next() will feed the value in Subject
+        sendUpdate(city: string) { 
+            this.pesquisar.next({ string: city }); 
         }
     
-        getUpdate(): Observable<any> { //the receiver component calls this function 
-            return this.pesquisar.asObservable(); //it returns as an observable to which the receiver funtion will subscribe
+        getUpdate(): Observable<any> { 
+            return this.pesquisar.asObservable(); 
         }
 
 

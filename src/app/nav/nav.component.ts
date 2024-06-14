@@ -37,10 +37,8 @@ export class NavComponent{
 
   @Input()
   hide!: boolean;
-  //hideSearch = true;
 
   sendClick(): void {
-    // send message to subscribers via observable subject
     this.weatherService.sendUpdate(this.cityAddress);
 }
 
