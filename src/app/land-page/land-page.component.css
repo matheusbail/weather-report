@@ -3,7 +3,7 @@
 }
 
 #day {
-  color: White;
+  color: #F5E9E9;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
@@ -108,12 +108,9 @@ input:invalid {
 }
 
 
-/* Estilo para o card */
 .card {
   width: 14rem;
-  /* Tamanho lateral pequeno */
   height: 12rem;
-  /* Longo verticalmente */
   margin-left: 1rem;
   background-color: #02AE7A;
   border: 3px solid #2EBFD2;
@@ -127,12 +124,9 @@ input:invalid {
 
 @media screen and (max-width: 600px) {
 
-  /* Estilo para o card */
   .card {
     width: 14rem;
-    /* Tamanho lateral pequeno */
     height: 12rem;
-    /* Longo verticalmente */
     margin-left: 1rem;
     position: relative;
     background-color: #02AE7A;
@@ -144,24 +138,8 @@ input:invalid {
   }
 }
 
-
-.cardEXE {
-  width: 20rem;
-  height: 20rem;
-  margin-left: 1rem;
-  background-color: #728f86;
-  border: 3px solid #0000;
-  float: right;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  position: absolute;
-}
-
-
 #forecast {
   width: 19rem;
   margin-left: 5px;
-  /* Tamanho lateral pequeno */
   height: 10rem;
 }

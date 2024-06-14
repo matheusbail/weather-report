@@ -57,8 +57,13 @@ constructor(private weatherService: WeatherService)
 {
   let search = localStorage.getItem('Cidade');
   console.log(search)
-  let xd = search!.toString()
-  this.last = xd;
+  let xd = search
+  if(xd == null){
+    this.last = "Nenhum"
+  }else {
+    this.last = xd!;
+  }
+  console.log(xd)
 
         this.subscriptionName= weatherService.getUpdate().subscribe
              (emitt => {

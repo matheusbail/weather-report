@@ -13,7 +13,6 @@ export class WeekComponent {
 
   @Input()
   hideWeek!: boolean;
-  //hideSearch = true;
 
 
   constructor(private weatherService: WeatherService)
