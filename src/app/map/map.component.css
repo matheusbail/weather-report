@@ -5,6 +5,7 @@
 #imgMap {
   width: 33rem;
   height: 33rem;
+  box-shadow: 10px 10px;
 
 }
 
@@ -16,7 +17,6 @@
   width: 35rem;
   height: 35rem;
   position: relative;
-  background-color: #02AE7A;
 }
 
 
@@ -26,10 +26,9 @@
     margin-left: 8%;
     width: 25rem;
     height: 35rem;
-    background-color: #02AE7A;
 
     #imgMap {
-      width: 23rem;
+      width: 25rem;
       height: 30rem;
     }
 
