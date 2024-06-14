@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import{LandPageComponent} from './land-page/land-page.component'
 import { MapComponent } from './map/map.component';
@@ -12,7 +12,7 @@ import { ForecastComponent } from './forecast/forecast.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent,LandPageComponent,MapComponent,WeekComponent,HttpClientModule,ForecastComponent], 
+  imports: [RouterOutlet, NavComponent,LandPageComponent,MapComponent,WeekComponent,HttpClientModule,ForecastComponent, RouterModule], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
