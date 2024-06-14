@@ -4,6 +4,13 @@
   margin-bottom: 10rem;
 }
 
+
+@media screen and (max-width: 800px) {
+  #comps {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #comps {
     display: block;
