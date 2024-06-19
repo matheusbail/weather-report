@@ -21,6 +21,7 @@
 @media screen and (max-width: 600px) {
   .card-maior {
     display: inline-block;
+    margin-left: 0%;
     width: 25rem;
     height: 35rem;
 
