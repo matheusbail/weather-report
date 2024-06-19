@@ -6,7 +6,6 @@
   width: 33rem;
   height: 33rem;
   box-shadow: 10px 10px;
-
 }
 
 .card-maior {
@@ -19,11 +18,9 @@
   position: relative;
 }
 
-
 @media screen and (max-width: 600px) {
   .card-maior {
     display: inline-block;
-    margin-left: 8%;
     width: 25rem;
     height: 35rem;
 
@@ -31,6 +28,5 @@
       width: 25rem;
       height: 30rem;
     }
-
   }
 }
