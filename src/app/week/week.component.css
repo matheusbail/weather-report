@@ -13,11 +13,10 @@
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 10px;
-  border: 3px solid #2EBFD2;
+  border: 3px solid #2ebfd2;
   padding: 5px;
-  background-color: #02AE7A;
+  background-color: #02ae7a;
 }
-
 
 .item {
   text-align: center;
@@ -38,10 +37,9 @@
   font-size: 14px;
 }
 
-
 @media screen and (max-width: 600px) {
   .container {
-    width: 70%;
+    width: 80%;
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
@@ -51,12 +49,10 @@
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 10px;
-    border: 3px solid #2EBFD2;
+    border: 3px solid #2ebfd2;
     padding: 5px;
-    background-color: #02AE7A;
-
+    background-color: #02ae7a;
   }
-
 
   .item {
     text-align: center;
@@ -76,5 +72,4 @@
     color: #666;
     font-size: 14px;
   }
-
 }
