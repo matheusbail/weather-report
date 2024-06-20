@@ -1,52 +1,73 @@
 @if(showLogo){
-<img class="logo" id="logoL"
-  src="https://res.cloudinary.com/dkrl41s4z/image/upload/v1716911500/frameworkdev/LOGOAIWR_frg1rx.png" alt="logo">
-}
-
-@if(showSearch){
+<img
+  class="logo"
+  id="logoL"
+  src="https://res.cloudinary.com/dkrl41s4z/image/upload/v1716911500/frameworkdev/LOGOAIWR_frg1rx.png"
+  alt="logo"
+/>
+} @if(showSearch){
 <div class="pesquisa">
   <form role="search" #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
-    <input focus class="form-control me-2" type="text" placeholder="Pesquisar Localização.." name="cityAddress" ngModel
-      required [(ngModel)]="cityAddress" aria-label="Search" pattern="^[A-Za-z]*.[A-Za-z]*.[A-Za-z]*$" minlength=4
-      id="validate">
-    <button class="btn btn-outline-warning" type="submit" value="hideComponent" id="hideAndShow"
-      [disabled]="loginForm.invalid" (click)="search(); onButtonClick(); clicker();function() ">Pesquisar</button>
+    <input
+      focus
+      class="form-control me-2"
+      type="text"
+      placeholder="Pesquisar Localização.."
+      name="cityAddress"
+      ngModel
+      required
+      [(ngModel)]="cityAddress"
+      aria-label="Search"
+      pattern="^[A-Za-z]*.[A-Za-z]*.[A-Za-z]*$"
+      minlength="4"
+      id="validate"
+    />
+    <button
+      class="btn btn-outline-warning"
+      type="submit"
+      value="hideComponent"
+      id="hideAndShow"
+      [disabled]="loginForm.invalid"
+      (click)="search(); onButtonClick(); clicker(); function()"
+    >
+      Pesquisar
+    </button>
   </form>
 </div>
-}
-@if(showCardInit){
+} @if(showCardInit){
 <div class="card text-center" id="cardTemp">
   <div class="card-body">
     <h5 class="card-title">Ultima Pesquisa</h5>
-    <span id="lastSearch">{{last}}</span>
+    <span id="lastSearch">{{ last }}</span>
     <div class="item">
       <h5 class="card-title">Pesquisando Agora...</h5>
-      <span id="lastSearch">{{cityAddress}}</span>
-      <div class="descricao">{{temp}}</div>
+      <span id="lastSearch">{{ cityAddress }}</span>
+      <div class="descricao">{{ temp }}</div>
     </div>
   </div>
 </div>
-}
-@if(showToday){
+} @if(showToday){
 <!-- Card normal acima do container -->
 <div class="card invisible">
   <div class="card-body">
-    <h5 id="city" class="card-title  text-center">{{city}}</h5>
+    <h5 id="city" class="card-title text-center">{{ city }}</h5>
     <div class="item">
-      <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-      <div class="descricao">{{temp}}</div>
+      <div class="icon"><i class="bi bi-sun" style="color: #ff810c"></i></div>
+      <div class="descricao">{{ temp }}</div>
     </div>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
-    <h5 id="city" class="card-title  text-center">{{city}}</h5>
+    <h5 id="city" class="card-title text-center">{{ city }}</h5>
     <div class="item">
-      <div class="icon"> <i class="bi bi-sun" style="color:#FF810C;"></i></div>
-      <div class="descricao">{{temp}}º</div>
+      <div class="icon"><i class="bi bi-sun" style="color: #ff810c"></i></div>
+      <div class="descricao">{{ temp }}º</div>
     </div>
   </div>
 </div>
-<h5 id="day">A Sensação Máxima hoje, {{today | date:"fullDate"}} é de {{environment  | number : '1.0-0'}}º!</h5>}
-
-
+<h5 id="day" class="text-center">
+  A Sensação Máxima hoje, {{ today | date : "fullDate" }} é de
+  {{ environment | number : "1.0-0" }}º!
+</h5>
+}

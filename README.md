@@ -4,13 +4,15 @@ Projeto idealizado para a disciplina de desenvolvimento web com frameworks e com
 
 link do projeto no FIGMA: https://www.figma.com/file/opUXB5uN4UKLSGuTtcAsv6/Weather-Report?type=design&node-id=0-1&mode=design&t=b1bKfjIgqeljGO6v-0
 
+link do video no Youtube:
+
 ## Manual de execução
 
-- rodar o comando npm install(Ira instalar dependencias)
-- rodar o comando npm installAngular (Ira instalar angular se necessario)
-- rodar o comando npm installServer (Ira instalar Json server se necessario)
-- rodar o comandno npm run watchDB (Inicia o db.json)
-- rodar o comando: `ng s -o` (Inicia Projeto, deve ser rodado no terminal da pasta app)
+- rodar o comando `npm install`(instala dependencias)
+- rodar o comando `npm installAngular` (instala angular se necessario)
+- rodar o comando `npm installServer` (instala Json server se necessario)
+- rodar o comando `npm run watchDB` (inicia o db.json)
+- rodar o comando: `ng s -o` (inicia Projeto, deve ser rodado no terminal da pasta app)
 
 ## Checklist
 
@@ -36,7 +38,7 @@ link do projeto no FIGMA: https://www.figma.com/file/opUXB5uN4UKLSGuTtcAsv6/Weat
 
 #### RA4 - Implementar comunicação eficaz entre componentes, utilizando padrões de comunicação e serviços para compartilhar lógica e dados.
 
-- [x] ID12: O aluno criou comunicação entre componentes não relacionados hierarquivamente por meio de serviços através do mecanismo de injeção de dependência, compartilhando lógica ou informações.
+- [ ] ID12: O aluno criou comunicação entre componentes não relacionados hierarquivamente por meio de serviços através do mecanismo de injeção de dependência, compartilhando lógica ou informações.
 - [x] ID13: O aluno utilizou efetivamente as diretivas @Input e @Output para estabelecer uma comunicanção em uma hierarquia de componentes, passando e recebendo dados entre componentes de maneira segura e consistente.
 
 #### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
@@ -61,22 +63,3 @@ link do projeto no FIGMA: https://www.figma.com/file/opUXB5uN4UKLSGuTtcAsv6/Weat
 - [x] ID25: O aluno criou um repositório no GitHub utilizando a estrutura do Gitflow, estabelecendo as branches "main" e "develop", demonstrando proficiência em boas práticas de controle de versão e organização do projeto.
 - [x] ID26: O aluno colaborou de maneira efetiva com outros membros do projeto, realizando fusões (merges) e resolução de conflitos de código de forma adequada e alinhada às práticas de desenvolvimento colaborativo.
 - [x] ID27: O aluno planejou, configurou e executou o processo de build da aplicação, preparando-a para produção e realizou o deploy em um ambiente de hospedagem, tornando-a prontamente acessível para uso.
-
-## Manual de execução
-
-- Clonar o repositório com `git clone`
-- Fazer checkout no branch `develop` que contém as modificações mais recentes
-- Abrir o projeto no editor Visual Studio Code (VS Code)
-- Abrir um terminal pelo VSCode ou qualquer terminal do seu Sistema Operacional apontando para o diretório raiz do projeto
-- Instalar as dependências contidas no `package.json`
-  - Comando: `npm i`
-- (Opcional) Instalar o JSON Server globalmente disponível em `https://www.npmjs.com/package/json-server`
-  - Comando: `npm i -g json-server`
-  - É opcional porque a dependência já vem cadastrada no arquivo `package.json` para instalação local na pasta `node_modules`
-- Executar a API Fake (JSON Server) via um dos seguintes comandos:
-  - Execução via script registrado no `package.json`: `npm run json:server:routes`
-  - Ou via Execução explícita: `json-server --watch db.json --routes routes.json`
-- O comando para execução do JSON Server deve ser aplicado no diretório raiz do projeto, ou seja, que contém o arquivo `db.json` e `routes.json`.
-  - Por padrão, a aplicação JSON Server executa no endereço `localhost:3000`
-- Abrir um novo terminal pelo VSCode e então executar o projeto Angular
-  - Comando: `ng s -o`
