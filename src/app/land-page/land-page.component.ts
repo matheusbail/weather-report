@@ -6,8 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { DatePipe, DecimalPipe } from '@angular/common';
 
-
-
 @Component({
   selector: 'app-land-page',
   standalone: true,
@@ -22,6 +20,7 @@ export class LandPageComponent {
   showCardInit=true;
   showLogo=true;
   showSearch=true;
+  
   showWeek=false;
   showMap=false;
   showToday=false;
@@ -43,7 +42,6 @@ public search(){
   this.showWeek=true;
   this.showMap=true;
   this.showToday=true;
-
 }
 @Output() buttonClick = new EventEmitter<boolean>();
   buttonClicked: boolean = true;
@@ -73,8 +71,6 @@ constructor(private weatherService: WeatherService)
                 localStorage.setItem('Cidade',this.cityAddress = temp);
                 this.function();
              });
-
-  
 }
 cityAddress ="";
  function(){
@@ -108,12 +104,5 @@ cityAddress ="";
 } 
          receivedValue: any;
          private subscriptionName: Subscription;
-
-     
-   
-
- 
-
-
 
 }

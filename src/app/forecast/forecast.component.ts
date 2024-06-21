@@ -1,20 +1,26 @@
 import { Component } from '@angular/core';
-import { LandPageComponent } from '../land-page/land-page.component';
 import { FormsModule } from '@angular/forms';
+import { WeatherService } from './../weather.service';
 
 @Component({
   selector: 'app-forecast',
   standalone: true,
   imports: [FormsModule],
   templateUrl: './forecast.component.html',
-  styleUrl: './forecast.component.css'
+  styleUrl: './forecast.component.css',
 })
 export class ForecastComponent {
+  cityAddress = '';
+  submit: any;
 
-cityAddress="";
-submit: any;
+  constructor(private weatherService: WeatherService) {}
 
-clickto(){
- alert("404")
-}
+  sendClick(): void {
+    this.weatherService.sendUpdate(this.cityAddress);
+  }
+
+  clickto() {
+    this.sendClick();
+    alert('404');
+  }
 }
