@@ -4,8 +4,7 @@ Projeto idealizado para a disciplina de desenvolvimento web com frameworks e com
 
 link do projeto no FIGMA: https://www.figma.com/file/opUXB5uN4UKLSGuTtcAsv6/Weather-Report?type=design&node-id=0-1&mode=design&t=b1bKfjIgqeljGO6v-0
 
-link do video no Youtube: https://youtu.be/u2BTHQZbII8
-
+link do video no Youtube: https://youtu.be/RColK4h6MXY
 ## Manual de execução
 
 - rodar o comando `npm install`(instala dependencias)
